@@ -1,1 +1,0 @@
-Unable to find template "home.twig.html" (looked into: ./public/templates).Unable to find template "404.html" (looked into: ./public/templates).A hash key must be a quoted string, a number, a name, or an expression enclosed in parentheses (unexpected token "punctuation" of value "{".
