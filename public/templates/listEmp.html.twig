@@ -1,0 +1,47 @@
+{% autoescape false %}
+<div class="container">
+    <div class="row justify-content-center mt-4">
+        <div class="col">
+            <a href="/">
+                <h2 class="display-6 text-center">Test PHP</h2>
+            </a>
+            <p class="text-center">List of employees</p>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-8">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Departament</th>
+                        <th scope="col">Salary</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Hire Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        {% for emp in list %}
+                        <tr id={{'e-' ~ emp.emp_no}} class="tr-emp">
+                            <th scope="row">{{emp.emp_no}}</th>
+                            <td>{{emp.first_name}}</td>
+                            <td>{{emp.last_name}}</td>
+                            <td>{{emp.dept_name}}</td>
+                            <td>{{emp.salary}}</td>
+                            <td>{{emp.title}}</td>
+                            <td>{{emp.hire_date}}</td>
+                        </tr>
+                        {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-2 mb-4">
+        <div class="col d-flex justify-content-center">
+            <button type="button" id="createEmp" class="btn btn-primary">New employee</button>
+        </div>
+    </div>
+</div>
+{% endautoescape %}

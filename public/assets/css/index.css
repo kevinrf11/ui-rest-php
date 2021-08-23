@@ -1,0 +1,14 @@
+.tr-emp{
+    cursor: pointer;
+}
+.full-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+#liveAlertPlaceholder{
+    position: absolute;
+    width: 100%;
+}

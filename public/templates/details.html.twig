@@ -1,0 +1,52 @@
+{% autoescape false %}
+	<div class="container full-container">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<a href="/">
+					<h2 class="display-6 text-center">Test PHP</h2>
+				</a>
+				<p class=" text-center">Details of employee</p>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-3">
+			{% if details == null %}
+				<div class="col-8">
+					<p class="text-center">
+						The employee number is incorrect or not found in the database.
+					</p>
+				</div>
+			{% else %}
+				<div class="col-12">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">First Name</th>
+								<th scope="col">Last Name</th>
+								<th scope="col">Gender</th>
+								<th scope="col">Departament</th>
+								<th scope="col">Title</th>
+								<th scope="col">Salary</th>
+								<th scope="col">Hire Date</th>
+								<th scope="col">Birth Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">{{details.emp_no}}</th>
+								<td>{{details.first_name}}</td>
+								<td>{{details.last_name}}</td>
+								<td>{{details.gender}}</td>
+								<td>{{details.dept_name}}</td>
+								<td>{{details.title}}</td>
+								<td>{{details.salary}}</td>
+								<td>{{details.hire_date}}</td>
+								<td>{{details.birth_date}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+{% endautoescape %}

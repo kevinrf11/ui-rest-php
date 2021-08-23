@@ -1,0 +1,73 @@
+{% autoescape false %}
+	<div class="container full-container">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<a href="/">
+					<h2 class="display-6 text-center">Test PHP</h2>
+				</a>
+				<p class="text-center">Create employee</p>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-3">
+			<div class="col-11 d-flex justify-content-center flex-column">
+				<div class="input-group mb-3">
+					<span class="input-group-text" id="basic-addon1">First name</span>
+					<input type="text" name="FirstName" class="form-control" placeholder="FirstName" aria-label="FirstName" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group mb-3">
+					<span class="input-group-text" id="basic-addon2">Last name</span>
+					<input type="text"  name="LastName" class="form-control" placeholder="LastName" aria-label="LastName" aria-describedby="basic-addon2">
+				</div>
+				<div class="input-group mb-3">
+					<span class="input-group-text" id="basic-addon3">Birth date</span>
+					<input type="date"  name="BirthDate" class="form-control" placeholder="BirthDate" aria-label="BirthDate" aria-describedby="basic-addon3">
+				</div>
+				<div class="input-group mb-3">
+					<label class="input-group-text" for="genderSelect">Gender</label>
+					<select class="form-select" name="Gender" id="genderSelect">
+						<option selected>Choose...</option>
+						<option value="M">Male</option>
+						<option value="F">Female</option>
+					</select>
+				</div>
+				<div class="input-group mb-3">
+					<label class="input-group-text" for="departmentSelect">Department</label>
+					<select class="form-select" name="Department" id="departmentSelect">
+						<option selected>Choose...</option>
+						<option value="d009">d009 - Customer Service</option>
+						<option value="d005">d005 - Development</option>
+						<option value="d002">d002 - Finance</option>
+						<option value="d003">d003 - Human Resources</option>
+						<option value="d001">d001 - Marketing</option>
+						<option value="d004">d004 - Production</option>
+						<option value="d006">d006 - Quality Management</option>
+						<option value="d008">d008 - Research</option>
+						<option value="d007">d007 - Sales</option>
+					</select>
+				</div>
+				<div class="input-group mb-3">
+					<label class="input-group-text" for="titleSelect">Title</label>
+					<select class="form-select" name="Title" id="titleSelect">
+						<option selected>Choose...</option>
+						<option value="Senior Engineer">Senior Engineer</option>
+						<option value="Staff">Staff</option>
+						<option value="Engineer">Engineer</option>
+						<option value="Senior Staff">Senior Staff</option>
+						<option value="Assistant Engineer">Assistant Engineer</option>
+						<option value="Technique Leader">Technique Leader</option>
+					</select>
+				</div>
+				<div class="input-group mb-3">
+					<span class="input-group-text">Salary</span>
+					<input type="number" name="Salary" class="form-control" aria-label="Salary">
+					<span class="input-group-text">.00</span>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-6 d-flex justify-content-center">
+				<button type="button" id="sendForm" class="btn btn-primary">Create</button>
+			</div>
+		</div>
+	</div>
+{% endautoescape %}
